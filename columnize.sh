@@ -36,3 +36,8 @@ do
     curr_col=0
   fi
 done
+
+# Make sure there is a newline at the end
+if [[ $curr_col != 0 ]]; then
+  echo
+fi
