@@ -6,7 +6,7 @@
 
 # Take an array of values and output them in a nicely formatted column view
 
-values=$1
+values=($*)
 longest_value=0
 
 # Find the longest value
