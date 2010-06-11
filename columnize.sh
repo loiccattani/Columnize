@@ -19,7 +19,6 @@ done
 # Compute column span
 term_width=$(tput cols)
 columns=$(( $term_width / ($longest_value + 2) ))
-echo "$columns columns"
 
 # Print values with pretty column width
 curr_col=0
