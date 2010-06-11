@@ -1,10 +1,9 @@
 #!/bin/bash
 # columnize.sh
 
-# Author: Loïc Cattani "Arko" <loic cattani at gmail com>
-# Started: 2010.06.11
-
 # Take a list of values and output them in a nicely formatted column view.
+
+# by Loïc Cattani "Arko" <loic cattani at gmail com>
 
 values=($*)
 longest_value=0
