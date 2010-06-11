@@ -4,7 +4,7 @@
 # Author: Loïc Cattani "Arko" <loic cattani at gmail com>
 # Started: 2010.06.11
 
-# Take an array of values and output them in a nicely formatted column view
+# Take a list of values and output them in a nicely formatted column view.
 
 values=($*)
 longest_value=0
