@@ -1,10 +1,14 @@
 #!/bin/bash
+# columnize.sh
 
+# Author: Arko - Loïc Cattani <loic cattani at gmail com>
+
+# Take an array of values and output them in a nicely formatted column view
 
 values=$1
 longest_value=0
 
-# Computing longest value
+# Find the longest value
 for value in ${values[@]}
 do
   if [[ ${#value} -gt $longest_value ]]; then
@@ -12,12 +16,12 @@ do
   fi
 done
 
-# Computing column span
+# Compute column span
 term_width=$(tput cols)
 columns=$(( $term_width / ($longest_value + 2) ))
 echo "$columns columns"
 
-# printing values with pretty column width
+# Print values with pretty column width
 curr_col=0
 for value in ${values[@]}
 do
