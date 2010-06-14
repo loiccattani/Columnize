@@ -18,7 +18,7 @@ done
 
 # Compute column span
 term_width=$(tput cols)
-columns=$(( $term_width / ($longest_value + 2) ))
+(( columns = $term_width / ($longest_value + 2) ))
 
 # Print values with pretty column width
 curr_col=0
@@ -26,10 +26,8 @@ for value in ${values[@]}
 do
   value_len=${#value}
   echo -n $value
-  spaces_missing=$(( $longest_value - $value_len + 2 ))
-  for (( i = 0; i < $spaces_missing; i++ )); do
-    echo -n " "
-  done
+  (( spaces_missing = $longest_value - $value_len + 2 ))
+  printf "%*s" $spaces_missing
   (( curr_col++ ))
   if [[ $curr_col == $columns ]]; then
     echo
